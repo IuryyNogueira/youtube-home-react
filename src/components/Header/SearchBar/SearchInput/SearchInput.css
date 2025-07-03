@@ -1,0 +1,23 @@
+.barra-pesquisa {
+  display: flex;
+  align-items: center;
+}
+.barra-pesquisa-input {
+  flex: 1;
+  padding: 8px;
+}
+.limpar-pesquisa {
+  margin-left: -32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.limpar-pesquisa.oculto {
+  display: none;
+}
+.botao-pesquisar {
+  margin-left: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

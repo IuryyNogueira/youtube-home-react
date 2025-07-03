@@ -1,0 +1,16 @@
+.scroll-horizontal-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  scrollbar-width: thin;
+}
+
+.scroll-horizontal-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-horizontal-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}

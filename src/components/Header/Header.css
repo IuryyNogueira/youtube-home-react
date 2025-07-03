@@ -1,0 +1,19 @@
+.icon-yt {
+  margin-left: 16px;
+  height: 20.5px;
+  margin-top: 1px;
+}
+
+.barra-topo-fixa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+
+  z-index: 1000; /* topo */
+}
