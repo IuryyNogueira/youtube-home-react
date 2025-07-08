@@ -1,24 +1,27 @@
-import {ButtonSideBar} from "./ButtonSideBar";
-// import LogoComponent from './LogoComponent';
-// import SearchBarComponent from './SearchBarComponent';
-// import HeaderSettingsButtonComponent from './HeaderSettingsButtonComponent';
+import { ButtonSideBar } from "./ButtonSideBar";
+
+import { SearchBar } from "./SearchBar";
+import HeaderSettingsButton from "./HeaderSettingsButton";
+import { LoginButton } from "./LoginButtonHeader";
 
 import "./Header.css";
 
-const HeaderView = () => {
+const HeaderView = ({ changeSidebar }) => {
   return (
     <header>
       <nav className="barra-topo-fixa">
+        <ButtonSideBar changeSidebar={changeSidebar} />
+
         <img
           className="icon-yt logo-youtube"
           src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"
           alt="Logo do Youtube"
         ></img>
-        <ButtonSideBar />
-        {/* <LogoComponent /> */}
-        {/* <SearchBarComponent />
-        <HeaderSettingsButtonComponent /> */}
-        {/* boão de login faltando decidir shared ou local */}
+
+        
+        <SearchBar />
+        <HeaderSettingsButton />
+        <LoginButton />
       </nav>
     </header>
   );

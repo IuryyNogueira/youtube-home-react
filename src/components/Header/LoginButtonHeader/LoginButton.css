@@ -1,0 +1,36 @@
+.login-topo {
+  position: fixed;
+  right: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(221, 221, 221, 0.795);
+  text-decoration: none;
+}
+.login-topo:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.icon-login-header {
+  width: 24px;
+  height: 24px;
+  border-radius: 10px;
+}
+
+
+.login-topo span {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: var(--font-size-small);
+}
+
+.login-topo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

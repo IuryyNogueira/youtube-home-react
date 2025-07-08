@@ -1,0 +1,23 @@
+.barra-pesquisa-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: absolute;
+  left: 30%;
+}
+
+@media (max-width: 1000px) {
+  .barra-pesquisa-input {
+    width: 350px;
+  }
+}
+@media (max-width: 850px) {
+  .barra-pesquisa-input {
+    width: 200px;
+  }
+}
+@media (max-width: 700px) {
+  .barra-pesquisa-container {
+    display: none;
+  }
+}

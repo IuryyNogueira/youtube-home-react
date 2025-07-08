@@ -1,23 +1,68 @@
 .barra-pesquisa {
   display: flex;
   align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 36px;
+  background-color: white;
+  position: relative;
+  cursor: text;
 }
+
 .barra-pesquisa-input {
-  flex: 1;
-  padding: 8px;
+  cursor: text;
+  background: transparent;
+  width: 500px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0 12px;
 }
+
 .limpar-pesquisa {
-  margin-left: -32px;
+  position: absolute;
+  right: 44px;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
+  font-size: 22px;
+  color: #888;
   cursor: pointer;
+  padding: 0 8px;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.limpar-pesquisa:hover {
+  background: #eee;
+  color: #d00;
 }
 .limpar-pesquisa.oculto {
   display: none;
 }
+
 .botao-pesquisar {
-  margin-left: 8px;
-  background: none;
-  border: none;
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  border-left: 1px solid #ccc;
+  padding: 0 12px;
   cursor: pointer;
+  height: 100%;
+  position: relative;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.botao-pesquisar:hover {
+  background-color: #e6e6e6;
 }

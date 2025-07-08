@@ -1,7 +1,7 @@
 import HeaderSettingsButtonView from "./HeaderSettingsButton.view";
 
-const HeaderSettingsButton = () => {
+const HeaderSettingsButtonContainer = () => {
   return <HeaderSettingsButtonView />;
 };
 
-export default HeaderSettingsButton;
+export default HeaderSettingsButtonContainer;

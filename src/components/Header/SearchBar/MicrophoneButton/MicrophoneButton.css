@@ -1,1 +1,16 @@
+.botao-microfone {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
+.botao-microfone:hover {
+  background-color: #e6e6e6;
+}

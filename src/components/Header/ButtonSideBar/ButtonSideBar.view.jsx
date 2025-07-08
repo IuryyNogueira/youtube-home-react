@@ -1,15 +1,17 @@
 import './ButtonSideBar.css'
     
-const ButtonSideBarView = () => {
+const ButtonSideBarView = ({changeSidebar}) => {
     
     return(
-        <label className="botao-barra-lateral">
+        <button className="botao-barra-lateral" 
+        onClick={changeSidebar}
+        >
             <img 
                 className="icon-lateral" 
                 src="https://img.icons8.com/?size=100&id=quuyJoZCkYni&format=png&color=000000" 
                 alt="Menu" 
             />
-        </label>
+        </button>
     );   
 };
 

@@ -1,2 +1,2 @@
-import SideBar from "./SideBar.content";
+import SideBar from "./SideBar.container";
 export default SideBar;

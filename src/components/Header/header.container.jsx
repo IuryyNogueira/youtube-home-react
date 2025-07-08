@@ -1,8 +1,7 @@
-import React from "react";
 import HeaderView from "./header.view";
 
-const HeaderContainer = () => {
-  return <HeaderView />;
+const HeaderContainer = ({ changeSidebar }) => {
+  return <HeaderView  changeSidebar={ changeSidebar } />;
 };
 
 export default HeaderContainer;

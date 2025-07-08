@@ -1,7 +1,7 @@
 import MicrophoneButtonView from "./MicrophoneButton.view";
 
-const MicrophoneButtonComponent = () => {
+const MicrophoneButtonContainer = () => {
   return <MicrophoneButtonView />;
 };
 
-export default MicrophoneButtonComponent;
+export default MicrophoneButtonContainer;

@@ -1,0 +1,19 @@
+.botao-barra-lateral {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+}
+
+.icon-lateral {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-right: 2px;
+}

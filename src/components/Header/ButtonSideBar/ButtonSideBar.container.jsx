@@ -1,7 +1,7 @@
 import ButtonSideBarView from "./ButtonSideBar.view";
 
-const ButtonSideBarContainer = () => {
-  return <ButtonSideBarView />;
+const ButtonSideBarContainer = ( { changeSidebar }) => {
+  return <ButtonSideBarView changeSidebar ={ changeSidebar }/>;
 };
 
 export default ButtonSideBarContainer;
