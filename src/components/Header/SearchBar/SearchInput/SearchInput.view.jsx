@@ -11,7 +11,7 @@ const SearchInputView = ({
   onSearch,
   offSearch,
   showSugestoes,
-
+  handleSujestionClick,
 }) => {
   return (
     <div className="barra-pesquisa">
@@ -36,10 +36,10 @@ const SearchInputView = ({
       >
         ×
       </button>
-      <button 
-      className="botao-pesquisar" 
-      id="botao-pesquisar"
-      onClick={handleSearch}
+      <button
+        className="botao-pesquisar"
+        id="botao-pesquisar"
+        onClick={handleSearch}
       >
         <img
           className="icon"
@@ -48,7 +48,12 @@ const SearchInputView = ({
         />
       </button>
 
-      <History history={history} showSugestoes={showSugestoes}/>
+      <History
+        history={history}
+        showSugestoes={showSugestoes}
+        handleSujestionClick={handleSujestionClick}
+        value={value}
+      />
     </div>
   );
 };

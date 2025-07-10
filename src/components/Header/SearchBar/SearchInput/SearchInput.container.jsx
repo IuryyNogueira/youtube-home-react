@@ -21,6 +21,14 @@ const SearchInput = () => {
     };
   const offSearch = () => setShowSugestoes(false);
 
+
+
+  const handleSujestionClick = (item) => {
+    setValue(item);
+    setShowSugestoes(false);
+  }
+
+
   const handleEnter = (e) => {
     if (e.key === "Enter") {
       handleSearch();
@@ -49,6 +57,7 @@ const SearchInput = () => {
       offSearch={offSearch}
       onSearch={onSearch}
       showSugestoes={showSugestoes}
+      handleSujestionClick={handleSujestionClick}
     />
   );
 };

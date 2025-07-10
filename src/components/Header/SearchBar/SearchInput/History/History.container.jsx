@@ -1,9 +1,14 @@
 import HistoryView from "./History.view";
 
-const HistoryComponent = ({history, showSugestoes}) => {
-    return(
-        <HistoryView history={history} showSugestoes={showSugestoes}/>
-    );
+const HistoryComponent = ({ history, showSugestoes, handleSujestionClick, value}) => {
+  return (
+    <HistoryView
+      history={history}
+      showSugestoes={showSugestoes}
+      handleSujestionClick={handleSujestionClick}
+      value={value}
+    />
+  );
 };
 
 export default HistoryComponent;
