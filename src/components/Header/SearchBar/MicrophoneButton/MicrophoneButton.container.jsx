@@ -1,7 +1,7 @@
 import MicrophoneButtonView from "./MicrophoneButton.view";
 
-const MicrophoneButtonContainer = () => {
-  return <MicrophoneButtonView />;
+const MicrophoneButtonContainer = ({changeStateModal}) => {
+  return <MicrophoneButtonView changeStateModal={changeStateModal}/>;
 };
 
 export default MicrophoneButtonContainer;

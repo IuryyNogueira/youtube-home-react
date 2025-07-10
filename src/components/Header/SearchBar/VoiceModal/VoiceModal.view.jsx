@@ -1,9 +1,9 @@
 import "./VoiceModal.css";
 
-const VoiceModalView = () => (
-  <div id="modal-voz" className="modal oculto">
-    <div className="conteudo-modal">
-      <span id="fechar-modal" className="fechar">
+const VoiceModalView = ({modalView, changeStateModal}) => (
+  <div id="modal-voz" className={`modal ${modalView ? "oculto" : ""}`}>
+    <div className={'conteudo-modal'}>
+      <span id="fechar-modal" className="fechar" onClick={changeStateModal}>
         ✕
       </span>
       <p className="ouvindo">Ouvindo...</p>

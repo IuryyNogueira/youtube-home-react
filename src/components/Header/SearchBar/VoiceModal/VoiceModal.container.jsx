@@ -1,9 +1,9 @@
 
 import VoiceModalView from "./VoiceModal.view";
 
-const VoiceModal = () => {
+const VoiceModal = ({modalView, changeStateModal}) => {
   
-  return <VoiceModalView />;
+  return <VoiceModalView modalView={modalView} changeStateModal={changeStateModal}/>;
 };
 
 export default VoiceModal;
