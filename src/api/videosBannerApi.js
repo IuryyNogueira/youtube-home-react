@@ -1,7 +1,4 @@
-import { createClient } from "pexels";
- const API_KEY = "BQYy0lrb2WP67HBaGvQQyZrANnez7cQFQah16C1uqiLOPV9o4KcLwxlI"; 
-// const API_KEY = import.meta.env.REACT_APP_PEXELS_API_KEY;
-const client = createClient(API_KEY);
+const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
 
 async function translateCategory(text) {
   const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${encodeURIComponent(
@@ -14,12 +11,15 @@ async function translateCategory(text) {
 
 async function takeImagesForBanner(category) {
   const categoryInEnglish = await translateCategory(category);
+  const url = `https://api.pexels.com/v1/search?query=${categoryInEnglish}&per_page=10`;
   try {
-    const response = await client.photos.search({
-      query: categoryInEnglish,
-      per_page: 10,
+    const response = await fetch(url, {
+      headers: {
+        Authorization: API_KEY,
+      },
     });
-    return response.photos || [];
+    const data = await response.json();
+    return data.photos || [];
   } catch (error) {
     console.log(error);
     return [];
