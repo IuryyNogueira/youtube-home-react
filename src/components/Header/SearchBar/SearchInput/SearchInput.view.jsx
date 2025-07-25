@@ -74,15 +74,8 @@ SearchInputView.propTypes = {
 
 SearchInputView.defaultProps = {
   value: "",
-  HandleInput: () => {},
-  cleanInput: () => {},
-  handleEnter: () => {},
-  handleSearch: () => {},
   history: [],
-  onSearch: () => {},
-  offSearch: () => {},
   showSuggestions: false,
-  handleSuggestionsClick: () => {},
 };
 
 export default SearchInputView;

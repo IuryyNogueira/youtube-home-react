@@ -18,7 +18,6 @@ ButtonSideBarView.propTypes = {
 };
 
 ButtonSideBarView.defaultProps = {
-  changeStateModal: () => {},
 };
 
 export default ButtonSideBarView;

@@ -1,5 +1,6 @@
 import "./ScrollHorizontal.css";
 import CategoryButton from "./categoryButton";
+import PropTypes from "prop-types";
 
 const ScrollHorizontalView = ({
   categorys,
@@ -47,6 +48,26 @@ const ScrollHorizontalView = ({
       )}
     </div>
   );
+};
+
+ScrollHorizontalView.propTypes = {
+  categorys: PropTypes.array,
+  categorySelect: PropTypes.string,
+  setCategorySelect: PropTypes.func,
+  scrollLeft: PropTypes.func,
+  scrollRight: PropTypes.func,
+  categorysScrollRef: PropTypes.object,
+  sideBarState: PropTypes.bool,
+  showRightArrow: PropTypes.bool,
+  showLefttArrow: PropTypes.bool,
+};
+
+ScrollHorizontalView.defaultProps = {
+  categorys: [],
+  categorySelect: "",
+  sideBarState: false,
+  showRightArrow: false,
+  showLefttArrow: false,
 };
 
 export default ScrollHorizontalView;

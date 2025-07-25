@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Videos.css";
 import VideoCard from "./VideoCard";
 
@@ -15,6 +16,16 @@ const VideosView = ({ sideBarState, videos }) => {
       </div>
     </section>
   );
+};
+
+VideosView.propTypes = {
+  sideBarState: PropTypes.bool,
+  videos: PropTypes.array,
+};
+
+VideosView.defaultProps = {
+  sideBarState: false,
+  videos: [],
 };
 
 export default VideosView;

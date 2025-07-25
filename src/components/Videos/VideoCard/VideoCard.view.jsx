@@ -1,4 +1,5 @@
 import "./VideoCard.css";
+import PropTypes from "prop-types";
 
 const VideoCardView = ({ video }) => {
   return (
@@ -18,6 +19,14 @@ const VideoCardView = ({ video }) => {
       </div>
     </div>
   );
+};
+
+VideoCardView.propTypes = {
+  video: PropTypes.object,
+};
+
+VideoCardView.defaultProps = {
+  video: {},
 };
 
 export default VideoCardView;
