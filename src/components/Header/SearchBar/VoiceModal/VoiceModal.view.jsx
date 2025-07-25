@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import "./VoiceModal.css";
 
-const VoiceModalView = ({modalView, changeStateModal}) => (
+const VoiceModalView = ({ modalView, changeStateModal }) => (
   <div id="modal-voz" className={`modal ${modalView ? "oculto" : ""}`}>
-    <div className={'conteudo-modal'}>
+    <div className={"conteudo-modal"}>
       <span id="fechar-modal" className="fechar" onClick={changeStateModal}>
         ✕
       </span>
@@ -14,4 +15,14 @@ const VoiceModalView = ({modalView, changeStateModal}) => (
   </div>
 );
 
-export default VoiceModalView; 
+VoiceModalView.propTypes = {
+  modalView: PropTypes.bool,
+  changeStateModal: PropTypes.func,
+};
+
+VoiceModalView.defaultProps = {
+  modalView: false,
+  changeStateModal: () => {},
+};
+
+export default VoiceModalView;

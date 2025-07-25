@@ -3,21 +3,26 @@ import { Header } from "./components/Header";
 import ScrollHorizontal from "./components/ScrollHorizontal";
 import SideBar from "./components/SideBar";
 import { Videos } from "./components/Videos";
-import { useState } from "react";
+import { useState} from "react";
 
 function App() {
-  let [sideBarMode, setSideBarMode] = useState(true);
+  const [sideBarState, setSideBarState] = useState(true);
+  const [categorySelect, setCategorySelect] = useState("Tudo");
 
   const toggleSideBar = () => {
-    setSideBarMode(!sideBarMode);
+    setSideBarState(!sideBarState);
   };
 
   return (
     <>
       <Header changeSidebar={toggleSideBar} />
-      <ScrollHorizontal />
-      <SideBar modeBar={sideBarMode}/> 
-      <Videos />
+      <ScrollHorizontal
+        sideBarState={sideBarState}
+        categorySelect={categorySelect}
+        setCategorySelect={setCategorySelect}
+      />
+      <SideBar modeBar={sideBarState} />
+      <Videos sideBarState={sideBarState} categorySelect={categorySelect} />
     </>
   );
 }

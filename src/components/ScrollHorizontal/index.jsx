@@ -1,2 +1,2 @@
-import ScrollHorizontal from "./ScrollHorizontal.content";
+import ScrollHorizontal from "./ScrollHorizontal.container";
 export default ScrollHorizontal;

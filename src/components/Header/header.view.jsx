@@ -1,5 +1,5 @@
 import { ButtonSideBar } from "./ButtonSideBar";
-
+import PropTypes from "prop-types";
 import { SearchBar } from "./SearchBar";
 import HeaderSettingsButton from "./HeaderSettingsButton";
 import { LoginButton } from "./LoginButtonHeader";
@@ -18,13 +18,20 @@ const HeaderView = ({ changeSidebar }) => {
           alt="Logo do Youtube"
         ></img>
 
-        
         <SearchBar />
         <HeaderSettingsButton />
         <LoginButton />
       </nav>
     </header>
   );
+};
+
+HeaderView.propTypes = {
+  changeSidebar: PropTypes.func,
+};
+
+HeaderView.defaultProps = {
+  changeSidebar: () => {},
 };
 
 export default HeaderView;

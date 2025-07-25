@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import { History } from "./History";
 import "./SearchInput.css";
 
 const SearchInputView = ({
-  value = "",
+  value,
   HandleInput,
   cleanInput,
   handleEnter,
@@ -10,8 +11,8 @@ const SearchInputView = ({
   history,
   onSearch,
   offSearch,
-  showSugestoes,
-  handleSujestionClick,
+  showSuggestions,
+  handleSuggestionsClick,
 }) => {
   return (
     <div className="barra-pesquisa">
@@ -50,12 +51,38 @@ const SearchInputView = ({
 
       <History
         history={history}
-        showSugestoes={showSugestoes}
-        handleSujestionClick={handleSujestionClick}
+        showSuggestions={showSuggestions}
+        handleSuggestionsClick={handleSuggestionsClick}
         value={value}
       />
     </div>
   );
+};
+
+SearchInputView.propTypes = {
+  value: PropTypes.string,
+  HandleInput: PropTypes.func,
+  cleanInput: PropTypes.func,
+  handleEnter: PropTypes.func,
+  handleSearch: PropTypes.func,
+  history: PropTypes.array,
+  onSearch: PropTypes.func,
+  offSearch: PropTypes.func,
+  showSuggestions: PropTypes.bool,
+  handleSuggestionsClick: PropTypes.func,
+};
+
+SearchInputView.defaultProps = {
+  value: "",
+  HandleInput: () => {},
+  cleanInput: () => {},
+  handleEnter: () => {},
+  handleSearch: () => {},
+  history: [],
+  onSearch: () => {},
+  offSearch: () => {},
+  showSuggestions: false,
+  handleSuggestionsClick: () => {},
 };
 
 export default SearchInputView;

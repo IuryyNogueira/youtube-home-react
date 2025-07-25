@@ -1,1 +1,1 @@
-export { default as Videos} from "./Videos.content";
+export { default as Videos} from "./Videos.container";

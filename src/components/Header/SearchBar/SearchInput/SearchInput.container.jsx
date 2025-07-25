@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SearchInputView from "./SearchInput.view";
 
 const SearchInput = () => {
@@ -10,22 +10,22 @@ const SearchInput = () => {
   //history
 
   const getHistorico = () => {
-    return JSON.parse(localStorage.getItem("historicoPesquisa")) || [];
+    return JSON.parse(localStorage.getItem("historicoPesquisa")) ;
   };
 
   const [history, setHistory] = useState(getHistorico);
-  const [showSugestoes, setShowSugestoes] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const onSearch = () => { 
-    if (history) setShowSugestoes(true);
+    if (history) setShowSuggestions(true);
     };
-  const offSearch = () => setShowSugestoes(false);
+  const offSearch = () => setShowSuggestions(false);
 
 
 
-  const handleSujestionClick = (item) => {
+  const handleSuggestionsClick = (item) => {
     setValue(item);
-    setShowSugestoes(false);
+    setShowSuggestions(false);
   }
 
 
@@ -42,7 +42,6 @@ const SearchInput = () => {
       const newSearch = value.trim();
       const newHistory = [...history, newSearch];
       setHistory(newHistory);
-      setValue("");
     }
   };
 
@@ -56,8 +55,8 @@ const SearchInput = () => {
       history={history}
       offSearch={offSearch}
       onSearch={onSearch}
-      showSugestoes={showSugestoes}
-      handleSujestionClick={handleSujestionClick}
+      showSuggestions={showSuggestions}
+      handleSujestionClick={handleSuggestionsClick}
     />
   );
 };

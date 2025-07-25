@@ -1,7 +1,7 @@
+import PropTypes from "prop-types";
+import "./MicrophoneButton.css";
 
-import "./MicrophoneButton.css"
-
-const MicrophoneButtonView = ({changeStateModal}) => (
+const MicrophoneButtonView = ({ changeStateModal }) => (
   <button className="botao-microfone" onClick={changeStateModal}>
     <img
       className="icon"
@@ -10,5 +10,13 @@ const MicrophoneButtonView = ({changeStateModal}) => (
     />
   </button>
 );
+
+MicrophoneButtonView.propTypes = {
+  changeStateModal: PropTypes.func,
+};
+
+MicrophoneButtonView.defaultProps = {
+  changeStateModal: () => {},
+};
 
 export default MicrophoneButtonView;
