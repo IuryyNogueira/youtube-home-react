@@ -4,11 +4,11 @@ import { ModalVoz } from "./VoiceModal";
 
 import "./SearchBar.css";
 
-const SearchBarView = ({changeStateModal, modalView}) => {
+const SearchBarView = ({changeStateModal, modalView, transcript}) => {
   return (
     <>
       <div className="barra-pesquisa-container">
-        <SearchInput />
+        <SearchInput transcript={transcript}/>
         <MicrophoneButton changeStateModal={changeStateModal}/>
       </div>
       <ModalVoz modalView={modalView} changeStateModal={changeStateModal}/>

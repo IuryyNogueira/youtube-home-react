@@ -13,6 +13,7 @@ const SearchInputView = ({
   offSearch,
   showSuggestions,
   handleSuggestionsClick,
+  
 }) => {
   return (
     <div className="barra-pesquisa">

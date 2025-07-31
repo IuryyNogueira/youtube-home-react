@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SearchInputView from "./SearchInput.view";
 
-const SearchInput = () => {
+const SearchInput = ({ transcript }) => {
   const [value, setValue] = useState("");
 
   const HandleInput = (e) => setValue(e.target.value);
@@ -10,24 +10,21 @@ const SearchInput = () => {
   //history
 
   const getHistorico = () => {
-    return JSON.parse(localStorage.getItem("historicoPesquisa")) ;
+    return JSON.parse(localStorage.getItem("historicoPesquisa")) || [];
   };
 
   const [history, setHistory] = useState(getHistorico);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const onSearch = () => { 
+  const onSearch = () => {
     if (history) setShowSuggestions(true);
-    };
+  };
   const offSearch = () => setShowSuggestions(false);
-
-
 
   const handleSuggestionsClick = (item) => {
     setValue(item);
     setShowSuggestions(false);
-  }
-
+  };
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
@@ -44,6 +41,12 @@ const SearchInput = () => {
       setHistory(newHistory);
     }
   };
+
+  useEffect(() => {
+    if (transcript && transcript !== value) {
+      setValue(transcript);
+    }
+  }, [transcript]);
 
   return (
     <SearchInputView

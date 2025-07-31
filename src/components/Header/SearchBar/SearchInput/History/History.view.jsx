@@ -41,7 +41,6 @@ HistoryView.propTypes = {
 HistoryView.defaultProps = {
   history: [],
   showSuggestions: false,
-  handleSuggestionsClick: () => {},
   value: "",
 };
 
