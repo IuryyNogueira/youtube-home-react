@@ -7,6 +7,7 @@ const HistoryView = ({
   handleSuggestionsClick,
   value,
 }) => {
+
   return (
     <>
       <ul
@@ -16,7 +17,7 @@ const HistoryView = ({
         {history
           ?.slice()
           ?.reverse()
-          ?.filter((item) => item.toLowerCase().includes(value))
+          ?.filter((item) => item.toLowerCase().includes(value.toLowerCase()))
           ?.map((item, index) => (
             <li
               key={index}

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import SearchInputView from "./SearchInput.view";
 
 const SearchInput = ({ transcript }) => {
@@ -15,6 +15,7 @@ const SearchInput = ({ transcript }) => {
 
   const [history, setHistory] = useState(getHistorico);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const focous = useRef();
 
   const onSearch = () => {
     if (history) setShowSuggestions(true);
@@ -22,6 +23,7 @@ const SearchInput = ({ transcript }) => {
   const offSearch = () => setShowSuggestions(false);
 
   const handleSuggestionsClick = (item) => {
+    console.log("Sugestão clicada:", item);
     setValue(item);
     setShowSuggestions(false);
   };
@@ -39,6 +41,8 @@ const SearchInput = ({ transcript }) => {
       const newSearch = value.trim();
       const newHistory = [...history, newSearch];
       setHistory(newHistory);
+      onSearch();
+      focous.current.focus();
     }
   };
 
@@ -59,7 +63,8 @@ const SearchInput = ({ transcript }) => {
       offSearch={offSearch}
       onSearch={onSearch}
       showSuggestions={showSuggestions}
-      handleSujestionClick={handleSuggestionsClick}
+      handleSuggestionsClick={handleSuggestionsClick}
+      focous={focous}
     />
   );
 };

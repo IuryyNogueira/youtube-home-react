@@ -13,7 +13,7 @@ const SearchInputView = ({
   offSearch,
   showSuggestions,
   handleSuggestionsClick,
-  
+  focous,
 }) => {
   return (
     <div className="barra-pesquisa">
@@ -28,6 +28,7 @@ const SearchInputView = ({
         onKeyDown={handleEnter}
         onFocus={onSearch}
         onBlur={offSearch}
+        ref={focous}
       />
       <button
         id="limparPesquisa"
@@ -71,6 +72,7 @@ SearchInputView.propTypes = {
   offSearch: PropTypes.func,
   showSuggestions: PropTypes.bool,
   handleSuggestionsClick: PropTypes.func,
+  focous: PropTypes.object,
 };
 
 SearchInputView.defaultProps = {
